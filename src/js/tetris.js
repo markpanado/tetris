@@ -2,6 +2,7 @@ export default function Tetris() {
     // config
     const _config = {
         app: 'Tetris',
+        logging: true,
     };
 
     // vars
@@ -12,7 +13,18 @@ export default function Tetris() {
     // private methods
     const _private = {
         init() {
-            // nothing to do here
+            _private.drawStage();
+        },
+
+        // logging
+        log() {
+            if (_config.logging)
+                console.log(`${_config.app}:\n\n\t`, ...arguments, `\n\n`);
+        },
+
+        // draw stage
+        drawStage() {
+            _private.log('Drawing stage');
         }
     };
 
@@ -22,12 +34,16 @@ export default function Tetris() {
         // debug
         debug() {
             console.log(`Success! ${Math.random()}`);
-        }
+        },
+
+        // boot
+        boot() {
+            _private.log('Game started');
+        },
     };
 
     return (() => {
         _private.init();
-        // _public.debug();
 
         return _public;
     })();

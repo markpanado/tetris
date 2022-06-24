@@ -1,0 +1,19 @@
+$color-bg: #f06;
+$color-game-bg: #333;
+$color-text: #ccc;
+
+body {
+    background-color: $color-bg;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: $color-text;
+}
+
+#game {
+    background-color: $color-game-bg;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

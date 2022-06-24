@@ -1,5 +1,7 @@
 import Tetris from "./tetris";
 
-const game = Tetris();
+const game = Tetris({
+    board: document.querySelector('#game'),
+});
 
-game.debug();
+game.boot();
