@@ -7,7 +7,9 @@ export default function Tetris() {
 
     // vars
     const _vars = {
-        
+        stage: null,
+        stage_height: 10,
+        stage_width: 5,
     };
 
     // private methods
@@ -19,7 +21,7 @@ export default function Tetris() {
         // logging
         log() {
             if (_config.logging)
-                console.log(`${_config.app}:\n\n\t`, ...arguments, `\n\n`);
+                console.log(`${_config.app}: ${new Date().valueOf()}\n\n\t`, ...arguments, `\n\n`);
         },
 
         // draw stage
